@@ -1,0 +1,29 @@
+.c-accordion {
+    background: $base-white;
+    margin: 40px auto 0;
+    padding: 55px 60px;
+}
+
+.c-accordion__button {
+    @include pc {
+        display: none;
+    }
+}
+
+.c-accordion__title {
+    font-size: 18px;
+    font-weight: $font-weight-medium;
+    letter-spacing: 2px;
+}
+
+.c-accordion__detail {
+    font-size: 16px;
+    line-height: 2.15;
+}
+
+.c-accordion__item {
+    @include pc {
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+}

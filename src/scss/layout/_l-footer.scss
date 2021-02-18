@@ -1,0 +1,28 @@
+.l-footer {
+  align-items: center;
+  background: $base-blue;
+  border-top: 2px solid $base-white;
+  color: $base-white;
+  display: flex;
+  justify-content: center;
+  padding: 31px 0 29px;
+  position: relative;
+
+  @include sp {
+    padding: 24px 0 22px;
+  }
+}
+
+.l-footer-icon {
+  font-size: 0;
+  margin: 0 auto;
+}
+
+.l-footer-copy {
+  position: absolute;
+  right: 102px;
+
+  @include sp {
+    right: 82px;
+  }
+}

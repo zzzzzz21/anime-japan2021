@@ -1,0 +1,21 @@
+{
+  "pages": [
+    {
+      "url":"/",
+      "top": true,
+      "name": "index",
+      "ogtype": "website",
+      "ogurl": "/",
+      "contents": "contents/_index",
+      "path": "./"
+    },
+    {
+      "url":"/news",
+      "name": "index",
+      "title": "News & Topics一覧",
+      "description": "News & Topics一覧",
+      "contents": "contents/news/_index",
+      "path": "../"
+    }
+  ]
+}

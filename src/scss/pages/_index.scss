@@ -1,0 +1,38 @@
+.l-main {
+}
+
+.l-kv {
+    padding: 185px 0;
+}
+
+.c-kv {
+    color: $base-white;
+    text-align: center;
+}
+
+.c-kv-title {
+    font-size: 0;
+}
+
+.c-kv-lead {
+    font-size: 24px;
+    font-weight: $font-weight-medium;
+    line-height: 1.7;
+    margin-top: 70px;
+}
+
+.l-section {
+    margin: 0 auto;
+    max-width: calc(#{$pc-content-width} + 40px);
+    padding: 0 20px;
+    width: 100%;
+
+    & + & {
+        margin-top: 150px;
+    }
+}
+
+.l-banner {
+    background: $base-blue;
+    padding: 120px 0 92px;
+}

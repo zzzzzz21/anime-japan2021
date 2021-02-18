@@ -1,0 +1,26 @@
+.c-tab {
+    margin: 25px auto 0;
+}
+
+.c-tab-labels {
+    display: flex;
+    justify-content: center;
+}
+
+.c-tab-labels__item {
+    max-width: 400px;
+    width: 100%;
+    margin: 30px 20px 0;
+}
+
+.c-tab-body {
+    margin: 80px auto 0;
+}
+
+.c-tab-body__block {
+    display: none;
+
+    &[aria-hidden="false"] {
+        display: block;
+    }
+}

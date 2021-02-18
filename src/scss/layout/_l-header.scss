@@ -1,0 +1,28 @@
+.l-header {
+  background: $base-blue;
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 60px;
+  width: 100%;
+}
+
+.l-header-title {
+  font-size: 0;
+}
+
+.l-header-sns {
+  align-items: center;
+  color: $base-white;
+  display: flex;
+}
+
+.l-header-sns__links {
+  align-items: center;
+  display: flex;
+  margin-left: 18px;
+}
+
+.l-header-sns__text {
+  font-weight: $font-weight-regular;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,21 @@
+.c-headline{
+    align-items: center;
+    color: $base-white;
+    display: flex;
+    font-family: $font-jost;
+    font-size: 70px;
+    font-weight: $font-weight-regular;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 14px;
+    line-height: 1.5;
+
+    &::before {
+        background: url(#{$IMG_PATH}icon-headline.svg) center no-repeat;
+        content: "";
+        display: block;
+        height: 40px;
+        margin: 0 15px 15px 0;
+        width: 76px;
+    }
+}

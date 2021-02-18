@@ -1,0 +1,66 @@
+.c-link-button {
+    align-items: center;
+    border-radius: 35px;
+    color: $base-white;
+    display: flex;
+    font-size: 24px;
+    font-weight: $font-weight-medium;
+    line-height: 1.875;
+    justify-content: center;
+    min-height: 70px;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+
+    &--nav {
+        @include getTriangle($base-white, bottom, 8, 8);
+        background: $base-black;
+        letter-spacing: 2px;
+
+        &::before {
+            bottom: 0;
+            right: 30px;
+            top: 0;
+        }
+    }
+
+    &--tab {
+        background: $base-white;
+        color: $base-blue;
+        letter-spacing: 1px;
+
+        &[aria-selected="true"],
+        &:hover,
+        &:focus {
+            background: $base-blue;
+            color: $base-white;
+        }
+    }
+
+    &--youtube,
+    &--twitter {
+        font-size: 20px;
+        transition: opacity ease .3s;
+        &:hover,
+        &:focus {
+            opacity: .7;
+        }
+    }
+
+    &--youtube {
+        background: $youtube-color;
+    }
+
+    &--twitter {
+        background: $twitter-color;
+    }
+}
+
+.c-link-button__leftIcon {
+    bottom: 0;
+    left: 34px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+}

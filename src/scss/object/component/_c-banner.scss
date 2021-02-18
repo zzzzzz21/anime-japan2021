@@ -1,0 +1,38 @@
+.c-banner {
+    max-width: calc(#{$pc-content-width} + 30px);
+    margin: 0 auto;
+}
+.c-banner-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.c-banner-list__item {
+    font-size: 0;
+    margin: 30px 15px 0;
+}
+
+.c-banner-list__link {
+
+    @include pc {
+        &:hover,
+        &:focus {
+            opacity: .7;
+        }
+    }
+}
+
+.c-banner-credit {
+    color: $base-white;
+    font-size: 16px;
+    font-weight: $font-weight-light;
+    letter-spacing: 2px;
+    line-height: 2.3;
+    text-align: center;
+    margin: 88px 0 0;
+
+    @include sp {
+
+    }
+}

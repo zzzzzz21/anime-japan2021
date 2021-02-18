@@ -1,0 +1,79 @@
+.p-program {
+    background: $program-background;
+    display: flex;
+    padding: 60px;
+
+    & + & {
+        margin-top: 40px;
+    }
+}
+
+.p-program-visual {
+    display: flex;
+    flex-direction: column;
+    width: 346px;
+}
+
+.p-program-visual-title {
+    font-size: 0;
+}
+
+.p-program-visual-images {
+    margin-top: 30px;
+}
+
+.p-program-visual-links {
+    background: $base-white;
+    margin-top: 30px;
+    padding: 31px 28px;
+    text-align: center;
+}
+
+.p-program-visual-links__text {
+    font-size: 18px;;
+    font-weight: $font-weight-regular;
+}
+
+.p-program-visual-links__button {
+    & + & {
+        margin-top: 10px;
+    }
+}
+
+.p-program-detail {
+    flex: 1;
+    padding: 0 0 0 60px;
+}
+
+.p-program-detail-head {
+    align-items: center;
+    display: flex;
+    font-size: 28px;
+    font-weight: $font-weight-medium;
+}
+
+.p-program-detail-head__time {
+    background: $base-blue;
+    color: $base-white;
+    min-height: 70px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.p-program-detail-head__name {
+    flex: 1;
+    padding-left: 25px;
+}
+
+.p-program-detail-description {
+    margin-top: 32px;
+}
+
+.p-program-detail-dl {
+    margin-top: 24px;
+}
+
+.p-program-detail-dl__dt {
+    color: $base-blue;
+}
