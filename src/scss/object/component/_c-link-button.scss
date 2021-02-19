@@ -13,6 +13,11 @@
     position: relative;
     width: 100%;
 
+    @include sp {
+        font-size: 16px;
+        min-height: 50px;
+    }
+
     &--nav {
         @include getTriangle($base-white, bottom, 8, 8);
         background: $base-black;
@@ -22,6 +27,14 @@
             bottom: 0;
             right: 30px;
             top: 0;
+        }
+
+        @include sp {
+            @include getTriangle($base-white, bottom, 6, 6);
+
+            &::before {
+                right: 25px;
+            }
         }
     }
 

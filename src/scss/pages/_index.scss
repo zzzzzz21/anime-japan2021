@@ -3,6 +3,10 @@
 
 .l-kv {
     padding: 185px 0;
+
+    @include sp {
+        padding: 90px 0;
+    }
 }
 
 .c-kv {
@@ -12,6 +16,12 @@
 
 .c-kv-title {
     font-size: 0;
+
+    img {
+        @include sp {
+            width: 90%;
+        }
+    }
 }
 
 .c-kv-lead {
@@ -19,6 +29,13 @@
     font-weight: $font-weight-medium;
     line-height: 1.7;
     margin-top: 70px;
+
+    @include sp {
+        font-size: 12px;
+        line-height: 1.9;
+        margin-top: 25px;
+        padding: 0 20px;
+    }
 }
 
 .l-section {

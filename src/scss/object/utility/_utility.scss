@@ -1,0 +1,5 @@
+.sp-view {
+    @include pc {
+        display: none;
+    }
+}

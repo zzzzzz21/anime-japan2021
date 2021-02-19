@@ -1,14 +1,25 @@
 .c-nav{
-    margin-top: 42px;
+    margin-top: 55px;
+
+    @include sp {
+        margin-top: 10px;
+    }
 }
 
 .c-nav__list {
-    display: flex;
-    justify-content: center;
+    @include pc {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .c-nav__item {
-    max-width: 400px;
+    max-width: 440px;
     width: 100%;
-    margin: 30px 20px 0;
+    padding: 15px 20px 0;
+
+    @include sp {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
 }

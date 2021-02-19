@@ -1,17 +1,30 @@
 .p-program {
     background: $program-background;
-    display: flex;
     padding: 60px;
+
+    @include pc {
+        display: flex;
+    }
+
+    @include sp {
+        padding: 20px 20px 10px;
+    }
 
     & + & {
         margin-top: 40px;
+
+        @include sp {
+            margin-top: 20px;
+        }
     }
 }
 
 .p-program-visual {
     display: flex;
     flex-direction: column;
-    width: 346px;
+    @include pc {
+        width: 346px;
+    }
 }
 
 .p-program-visual-title {
@@ -20,6 +33,10 @@
 
 .p-program-visual-images {
     margin-top: 30px;
+
+    @include sp {
+        margin-top: 20px;
+    }
 }
 
 .p-program-visual-links {
@@ -27,10 +44,14 @@
     margin-top: 30px;
     padding: 31px 28px;
     text-align: center;
+
+    @include sp {
+        margin-top: 20px;
+    }
 }
 
 .p-program-visual-links__text {
-    font-size: 18px;;
+    font-size: 18px;
     font-weight: $font-weight-regular;
 }
 
@@ -41,15 +62,24 @@
 }
 
 .p-program-detail {
-    flex: 1;
-    padding: 0 0 0 60px;
+    @include pc {
+        flex: 1;
+        padding: 0 0 0 60px;
+    }
 }
 
 .p-program-detail-head {
-    align-items: center;
-    display: flex;
     font-size: 28px;
     font-weight: $font-weight-medium;
+
+    @include pc {
+        align-items: center;
+        display: flex;
+    }
+
+    @include sp {
+        font-size: 17px;
+    }
 }
 
 .p-program-detail-head__time {
@@ -59,19 +89,42 @@
     padding: 10px;
     text-align: center;
     width: 200px;
+
+    @include sp {
+        display: block;;
+        margin-top: 20px;
+        min-height: 44px;
+        padding: 5px;
+        width: 134px;
+    }
 }
 
 .p-program-detail-head__name {
-    flex: 1;
-    padding-left: 25px;
+    @include pc {
+        flex: 1;
+        padding-left: 25px;
+    }
+
+    @include sp {
+        line-height: 1.7;
+        margin-top: 10px;
+    }
 }
 
 .p-program-detail-description {
     margin-top: 32px;
+
+    @include sp {
+        margin-top: 5px;
+    }
 }
 
 .p-program-detail-dl {
     margin-top: 24px;
+
+    @include sp {
+        margin-top: 8px;
+    }
 }
 
 .p-program-detail-dl__dt {

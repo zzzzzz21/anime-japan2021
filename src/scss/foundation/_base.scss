@@ -23,6 +23,11 @@ body {
   -webkit-overflow-scrolling: touch;
   text-size-adjust: 100%;
   width: 100%;
+
+  @include sp {
+    font-size: 13px;
+    line-height: 1.95;
+  }
 }
 
 a {

@@ -1,21 +1,31 @@
 .c-headline{
     align-items: center;
-    color: $base-white;
     display: flex;
-    font-family: $font-jost;
-    font-size: 70px;
-    font-weight: $font-weight-regular;
     flex-direction: column;
     justify-content: center;
-    letter-spacing: 14px;
-    line-height: 1.5;
+
+    @include sp {
+        img {
+            &[alt="STAGE"] {
+                width: 147px;
+            }
+        }
+    }
 
     &::before {
         background: url(#{$IMG_PATH}icon-headline.svg) center no-repeat;
+        background-size: 100%;
         content: "";
         display: block;
         height: 40px;
-        margin: 0 15px 15px 0;
+        margin: 0 0 38px;
         width: 76px;
+
+        @include sp {
+            margin: 0 0 24px;
+            height: 24px;
+            width: 46px;
+
+        }
     }
 }
