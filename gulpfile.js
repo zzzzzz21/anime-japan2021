@@ -62,6 +62,7 @@ gulp.task('js', function(done) {
   .pipe(concat('script.js'))
   .pipe(uglify())
   .pipe(gulp.dest('./' + paths + '/' + Assets + '/js/'))
+  .pipe(browserSync.stream())
   done();
 });
 

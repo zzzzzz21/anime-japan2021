@@ -46,6 +46,7 @@
         &[aria-selected="true"],
         &:hover,
         &:focus {
+            opacity: 1;
             background: $base-blue;
             color: $base-white;
         }
@@ -54,11 +55,6 @@
     &--youtube,
     &--twitter {
         font-size: 20px;
-        transition: opacity ease .3s;
-        &:hover,
-        &:focus {
-            opacity: .7;
-        }
     }
 
     &--youtube {

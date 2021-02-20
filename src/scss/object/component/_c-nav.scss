@@ -19,6 +19,7 @@
     padding: 15px 20px 0;
 
     @include sp {
+        margin: auto;
         padding-left: 45px;
         padding-right: 45px;
     }

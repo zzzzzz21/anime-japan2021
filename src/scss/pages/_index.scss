@@ -1,4 +1,9 @@
 .l-main {
+    padding: 0 0 170px;
+
+    @include sp {
+        padding: 0 20px 150px;
+    }
 }
 
 .l-kv {
@@ -38,15 +43,20 @@
     }
 }
 
-.l-section {
+.l-stage {
     margin: 0 auto;
     max-width: calc(#{$pc-content-width} + 40px);
-    padding: 0 20px;
     width: 100%;
 
-    & + & {
-        margin-top: 150px;
+    @include pc {
+        padding: 0 20px;
     }
+}
+
+.l-goods {
+    margin: 150px auto 0;
+    max-width: calc(#{$pc-content-width} + 40px);
+    width: 100%;
 }
 
 .l-banner {

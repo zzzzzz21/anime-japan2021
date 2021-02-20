@@ -1,24 +1,74 @@
 .c-accordion {
     background: $base-white;
     margin: 40px auto 0;
-    padding: 55px 60px;
 }
 
 .c-accordion__button {
     @include pc {
         display: none;
     }
+
+    @include sp {
+        @include getTriangle($base-white, bottom, 7, 7);
+        align-items: center;
+        background: $accordion-button-background;
+        color: $base-white;
+        display: flex;
+        font-size: 18px;
+        font-weight: $font-weight-medium;
+        justify-content: center;
+        min-height: 54px;
+        padding: 10px 25px;
+        width: 100%;
+
+        &::before {
+            bottom: 0;
+            right: 20px;
+            top: 0;
+        }
+
+    }
+}
+
+.c-accordion__content {
+    padding: 55px 60px;
+
+    @include pc {
+        max-height: 9999px !important;
+    }
+
+    @include sp {
+        font-size: 12px;
+        line-height: 2.1;
+        padding: 18px;
+        transition: max-height ease .3s, padding-top ease .3s, padding-bottom ease .3s;
+        overflow: hidden;
+
+        &[aria-hidden="true"] {
+            padding-top: 0;
+            padding-bottom: 0;
+            max-height: 0;
+        }
+    }
 }
 
 .c-accordion__title {
-    font-size: 18px;
     font-weight: $font-weight-medium;
-    letter-spacing: 2px;
+    @include pc {
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
 }
 
 .c-accordion__detail {
-    font-size: 16px;
-    line-height: 2.15;
+    @include pc {
+        font-size: 16px;
+        line-height: 2.15;
+    }
+    
+    @include sp {
+        font-weight: $font-weight-regular;
+    }
 }
 
 .c-accordion__item {

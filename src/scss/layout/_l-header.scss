@@ -12,6 +12,12 @@
 
 .l-header-title {
   font-size: 0;
+
+  img {
+    @include sp {
+      width: 185px;
+    }
+  }
 }
 
 .l-header-sns {

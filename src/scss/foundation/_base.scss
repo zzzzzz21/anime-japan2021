@@ -41,6 +41,11 @@ a,
 button {
   @include pc {
     transition: all ease .3s;
+
+    &:hover,
+    &:focus {
+        opacity: .7;
+    }
   }
 }
 

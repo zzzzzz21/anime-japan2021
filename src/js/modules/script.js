@@ -1,7 +1,18 @@
 'use strict';
 
+// PC/SP判定フラグ
+let isSmartPhone;
+// ブレークポイント（px）
+const breakPoint = '768';
+
 {
     init();
+    document.addEventListener('DOMContentLoaded', () => {
+        init();
+    });
+    window.addEventListener('resize', () => {
+        getDeviceWidth();
+    });
 }
 
 
@@ -11,7 +22,21 @@
  */
 function init() {
     getScrollButton();
-    toggleTab();
+    switchTab();
+    getDeviceWidth();
+    setAccordion();
+}
+
+/**
+ * デバイス幅でPCもしくはスマートフォンかどうかの判定
+ *
+ */
+function getDeviceWidth() {
+    if (window.matchMedia && window.matchMedia('(max-device-width:' +  breakPoint + 'px)').matches) {
+        isSmartPhone = true;
+    } else {
+        isSmartPhone = false;
+    }
 }
 
 /**
@@ -44,7 +69,7 @@ function getScrollButton() {
  * タブの開閉機能
  *
  */
-function toggleTab() {
+function switchTab() {
     // .js-tabを持つボタンを全て取得
     const tabButton = document.querySelectorAll('.js-tab-button');
     const tabBlock = document.querySelectorAll('.js-tab-block');
@@ -68,4 +93,48 @@ function toggleTab() {
         });
     }
 
+}
+
+/**
+ * アコーディオンの開閉機能
+ *
+ */
+function setAccordion() {
+    if(isSmartPhone) {
+        // .js-accordionを持つボタンを全て取得
+        const accordions = document.querySelectorAll('.js-accordion');
+
+        // ボタンにタブをつける
+        for (let i = 0; i < accordions.length; i++) {
+            const button = accordions[i].querySelector('.js-accordion-button');
+            const panel = accordions[i].querySelector('.js-accordion-panel');
+            const buttonId = button.getAttribute('id');
+            const panelId = panel.getAttribute('id');
+            let panelHeight = panel.clientHeight;
+
+            // アコーディオンに必要なwai-aria属性を付与する。
+            button.setAttribute('aria-expanded', false);
+            button.setAttribute('aria-controls', panelId);
+            panel.setAttribute('aria-hidden', true);
+            panel.setAttribute('aria-labelledby', buttonId);
+
+            window.addEventListener('resize', () => {
+                panelHeight = panel.clientHeight;
+            });
+
+            // アコーディオンの開閉昨日
+            button.addEventListener('click', () => {
+                const buttonAriaExpanded = button.getAttribute('aria-expanded');
+                if(buttonAriaExpanded === 'true') {
+                    button.setAttribute('aria-expanded', false);
+                    panel.setAttribute('aria-hidden', true);
+                    panel.style.maxHeight = 0;
+                } else if(buttonAriaExpanded === 'false') {
+                    button.setAttribute('aria-expanded', true);
+                    panel.setAttribute('aria-hidden', false);
+                    panel.style.maxHeight = `${panelHeight}px`;
+                }
+            });
+        }
+    }
 }
