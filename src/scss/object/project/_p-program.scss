@@ -7,7 +7,7 @@
     }
 
     @include sp {
-        padding: 20px 20px 10px;
+        padding: 20px 20px 15px;
     }
 
     & + & {
@@ -24,35 +24,58 @@
     flex-direction: column;
     @include pc {
         width: 346px;
+        flex-basis: 346px;
     }
 }
 
 .p-program-visual-title {
     font-size: 0;
+
+    img {
+        width: 100%;
+    }
 }
 
 .p-program-visual-images {
+    font-size: 0;
     margin-top: 30px;
 
     @include sp {
         margin-top: 20px;
+    }
+
+    img {
+        width: 100%;
     }
 }
 
 .p-program-visual-links {
     background: $base-white;
     margin-top: 30px;
-    padding: 31px 28px;
+    padding: 23px 28px 30px;
     text-align: center;
 
     @include sp {
         margin-top: 20px;
+        padding: 13px 18px 22px;
     }
 }
 
 .p-program-visual-links__text {
     font-size: 18px;
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-medium;
+
+    @include sp {
+        font-size: 13px;
+    }
+}
+
+.p-program-visual-links__buttons {
+    margin: 15px auto 0;
+
+    @include sp {
+        margin-top: 8px;
+    }
 }
 
 .p-program-visual-links__button {
@@ -63,7 +86,7 @@
 
 .p-program-detail {
     @include pc {
-        flex: 1;
+        flex: 1 1 0;
         padding: 0 0 0 60px;
     }
 }
@@ -75,6 +98,10 @@
     @include pc {
         align-items: center;
         display: flex;
+    }
+
+    @include tablet {
+        flex-wrap: wrap;
     }
 
     @include sp {
@@ -100,9 +127,16 @@
 }
 
 .p-program-detail-head__name {
+    line-height: 1.4;
+
     @include pc {
         flex: 1;
         padding-left: 25px;
+    }
+
+    @include tablet {
+        flex: auto;
+        padding-left: 0;
     }
 
     @include sp {
@@ -129,4 +163,20 @@
 
 .p-program-detail-dl__dt {
     color: $base-blue;
+}
+
+.p-program-detail-dl__dd {
+    @include pc {
+        &--indent {
+            @include textIndent;
+        }
+    }
+}
+
+.p-program-detail-button {
+    margin-top: 32px;
+
+    @include sp {
+        margin-top: 8px;
+    }
 }

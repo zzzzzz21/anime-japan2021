@@ -27,6 +27,15 @@
 }
 
 .l-header-sns__button {
+
+  & + & {
+    margin-left: 24px;
+
+    @include sp {
+      margin-left: 12px;
+    }
+  }
+
   @include sp {
     &--tw {
       width: 18px;
@@ -42,9 +51,21 @@
   align-items: center;
   display: flex;
   margin-left: 18px;
+
+  @include sp {
+    margin-left: 14px;
+  }
 }
 
 .l-header-sns__text {
-  font-weight: $font-weight-regular;
-  letter-spacing: 2px;
+  font-size: 16px;
+
+  @include pc {
+    font-weight: $font-weight-regular;
+    letter-spacing: 2px;
+  }
+
+  @include sp {
+    font-size: 10px;
+  }
 }

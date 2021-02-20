@@ -2,23 +2,48 @@
     max-width: calc(#{$pc-content-width} + 30px);
     margin: 0 auto;
 }
+
 .c-banner-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include pc {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    @include sp {
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: repeat(auto-fit, calc(50% - 8px));
+    }
 }
 
 .c-banner-list__item {
     font-size: 0;
-    margin: 30px 15px 0;
+
+    @include pc {
+        margin: 30px 15px 0;
+        width: 306px;
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 .c-banner-credit {
     color: $base-white;
     font-size: 16px;
     font-weight: $font-weight-light;
-    letter-spacing: 2px;
-    line-height: 2.3;
     text-align: center;
     margin: 88px 0 0;
+
+    @include pc {
+        letter-spacing: 2px;
+        line-height: 2.3;
+    }
+
+    @include sp {
+        font-size: 10px;
+        margin: 44px 0 0;
+    }
 }

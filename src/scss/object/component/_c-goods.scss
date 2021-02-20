@@ -1,6 +1,10 @@
 .c-goods {
     max-width: calc(#{$pc-content-width} + 40px);
-    margin: 0 auto;
+    margin: 38px auto 0;
+
+    @include sp {
+        margin: 25px auto 0;
+    }
 }
 .c-goods-list {
     display: flex;
@@ -15,6 +19,10 @@
 
     @include sp {
         margin: 20px 0 0;
+        width: 100%;
+    }
+
+    img {
         width: 100%;
     }
 }

@@ -9,13 +9,20 @@
   position: relative;
 
   @include sp {
-    padding: 24px 0 22px;
+    border-width: 1px;
+    padding: 12px 0;
   }
 }
 
 .l-footer-icon {
   font-size: 0;
   margin: 0 auto;
+
+  @include sp {
+    img {
+      width: 25px;
+    }
+  }
 }
 
 .l-footer-copy {
@@ -23,6 +30,7 @@
   right: 102px;
 
   @include sp {
-    right: 82px;
+    font-size: 10px;
+    right: 22px;
   }
 }

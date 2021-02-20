@@ -55,6 +55,11 @@
     &--youtube,
     &--twitter {
         font-size: 20px;
+
+        @include sp {
+            font-size: 16px;
+            padding: 0;
+        }
     }
 
     &--youtube {
@@ -64,6 +69,29 @@
     &--twitter {
         background: $twitter-color;
     }
+
+    &--aj {
+        @include getTriangle($base-white, right, 8, 8);
+        background: $base-blue;
+        font-size: 20px;
+        font-weight: $font-weight-regular;
+        max-width: 460px;
+
+        &::before {
+            bottom: 0;
+            right: 36px;
+            top: 0;
+        }
+
+        @include sp {
+            @include getTriangle($base-white, right, 6, 6);
+            font-size: 16px;
+
+            &::before {
+                right: 14px;
+            }
+        }
+    }
 }
 
 .c-link-button__leftIcon {
@@ -72,4 +100,8 @@
     margin: auto;
     position: absolute;
     top: 0;
+
+    @include sp {
+        left: 27px;
+    }
 }

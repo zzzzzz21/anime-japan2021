@@ -1,5 +1,5 @@
 .c-accordion {
-    background: $base-white;
+    font-size: 0;
     margin: 40px auto 0;
 }
 
@@ -19,6 +19,7 @@
         justify-content: center;
         min-height: 54px;
         padding: 10px 25px;
+        transition: transform ease .3s;
         width: 100%;
 
         &::before {
@@ -27,10 +28,17 @@
             top: 0;
         }
 
+        &[aria-expanded="true"] {
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+
     }
 }
 
 .c-accordion__content {
+    background: $base-white;
     padding: 55px 60px;
 
     @include pc {

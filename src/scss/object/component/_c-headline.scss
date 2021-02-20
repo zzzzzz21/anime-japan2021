@@ -4,10 +4,19 @@
     flex-direction: column;
     justify-content: center;
 
+    img {
+        &[alt="STAGE"] {
+            width: 250px;
+        }
+    }
+
     @include sp {
         img {
             &[alt="STAGE"] {
                 width: 147px;
+            }
+            &[alt="GOODS"] {
+                width: 178px;
             }
         }
     }
@@ -25,7 +34,6 @@
             margin: 0 0 24px;
             height: 24px;
             width: 46px;
-
         }
     }
 }
