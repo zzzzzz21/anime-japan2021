@@ -1,9 +1,10 @@
-<%- include('./include/_head') %>
-<%- include('./include/_header') %>
+<% const path = ''; %>
+<%- include('./include/_head', { path: path }) %>
+<%- include('./include/_header', { path: path }) %>
 <main role="main" class="l-main">
     <section class="l-kv">
         <div class="c-kv">
-            <h1 class="c-kv-title"><img src="/assets/images/top-title.svg" alt="Anime Japan 2021" width="998" height="276"></h1>
+            <h1 class="c-kv-title"><img src="<%= path %>assets/images/top-title.svg" alt="Anime Japan 2021" width="998" height="276"></h1>
             <p class="c-kv-lead">
 AnimeJapan 2021でしか見られない<br class="sp-view">コンテンツが盛り沢山の2日間！<br>
 アニメ・舞台作品のスタッフ＆キャストによるスペシャルトークやライブなど新情報満載のオンラインイベントをお届け！<br>
@@ -22,7 +23,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
         </div>
     </section>
     <section class="l-stage" id="js-scroll-stage">
-        <h2 class="c-headline"><img src="/assets/images/headline01.png" alt="STAGE" width="301" height="65"></h2>
+        <h2 class="c-headline"><img src="<%= path %>assets/images/headline01.png" alt="STAGE" width="301" height="65"></h2>
         <div class="c-tab">
             <div class="c-tab-labels" role="tablist">
                 <div class="c-tab-labels__item">
@@ -55,10 +56,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program01-title.jpg" alt="天地創造デザイン部" width="591" height="188">
+                                <img src="<%= path %>assets/images/program01-title.jpg" alt="天地創造デザイン部" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program01-image01.jpg" alt="天地創造デザイン部" width="590" height="810">
+                                <img src="<%= path %>assets/images/program01-image01.jpg" alt="天地創造デザイン部" width="590" height="810">
                             </div>
                             <div class="p-program-visual-links">
                                 <p class="p-program-visual-links__text">視聴はこちら</p>
@@ -66,7 +67,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--youtube" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-youtube.svg" 
+                                                src="<%= path %>assets/images/icon-youtube.svg" 
                                                 alt="YouTube" width="20" height="14">
                                             YouTube
                                         </a>
@@ -74,7 +75,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--twitter" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-twitter.svg" 
+                                                src="<%= path %>assets/images/icon-twitter.svg" 
                                                 alt="Twitter LIVE" width="20" height="18">
                                             Twitter LIVE
                                         </a>
@@ -117,10 +118,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program02-title.jpg" alt="異世界魔王と召喚少女の奴隷魔術Ω" width="591" height="188">
+                                <img src="<%= path %>assets/images/program02-title.jpg" alt="異世界魔王と召喚少女の奴隷魔術Ω" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program02-image01.jpg" alt="異世界魔王と召喚少女の奴隷魔術Ω" width="590" height="726">
+                                <img src="<%= path %>assets/images/program02-image01.jpg" alt="異世界魔王と召喚少女の奴隷魔術Ω" width="590" height="726">
                             </div>
                             <div class="p-program-visual-links">
                                 <p class="p-program-visual-links__text">視聴はこちら</p>
@@ -128,7 +129,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--youtube" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-youtube.svg" 
+                                                src="<%= path %>assets/images/icon-youtube.svg" 
                                                 alt="YouTube" width="20" height="14">
                                             YouTube
                                         </a>
@@ -136,7 +137,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--twitter" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-twitter.svg" 
+                                                src="<%= path %>assets/images/icon-twitter.svg" 
                                                 alt="Twitter LIVE" width="20" height="18">
                                             Twitter LIVE
                                         </a>
@@ -178,10 +179,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program03-title.jpg" alt="新サクラ大戦 the Stage" width="591" height="188">
+                                <img src="<%= path %>assets/images/program03-title.jpg" alt="新サクラ大戦 the Stage" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program03-image01.jpg" alt="新サクラ大戦 the Stage" width="590" height="333">
+                                <img src="<%= path %>assets/images/program03-image01.jpg" alt="新サクラ大戦 the Stage" width="590" height="333">
                             </div>
                             <div class="p-program-visual-links">
                                 <p class="p-program-visual-links__text">視聴はこちら</p>
@@ -189,7 +190,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--youtube" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-youtube.svg" 
+                                                src="<%= path %>assets/images/icon-youtube.svg" 
                                                 alt="YouTube" width="20" height="14">
                                             YouTube
                                         </a>
@@ -197,7 +198,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--twitter" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-twitter.svg" 
+                                                src="<%= path %>assets/images/icon-twitter.svg" 
                                                 alt="Twitter LIVE" width="20" height="18">
                                             Twitter LIVE
                                         </a>
@@ -240,10 +241,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program04-title.jpg" alt="Run Girls, Radio!! " width="591" height="188">
+                                <img src="<%= path %>assets/images/program04-title.jpg" alt="Run Girls, Radio!! " width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program04-image01.jpg" alt="Run Girls, Radio!! " width="590" height="393">
+                                <img src="<%= path %>assets/images/program04-image01.jpg" alt="Run Girls, Radio!! " width="590" height="393">
                             </div>
                             <div class="p-program-visual-links">
                                 <p class="p-program-visual-links__text">視聴はこちら</p>
@@ -251,7 +252,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--youtube" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-youtube.svg" 
+                                                src="<%= path %>assets/images/icon-youtube.svg" 
                                                 alt="YouTube" width="20" height="14">
                                             YouTube
                                         </a>
@@ -259,7 +260,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--twitter" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-twitter.svg" 
+                                                src="<%= path %>assets/images/icon-twitter.svg" 
                                                 alt="Twitter LIVE" width="20" height="18">
                                             Twitter LIVE
                                         </a>
@@ -306,10 +307,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program05-title.jpg" alt="フルーツバスケット The Final" width="591" height="188">
+                                <img src="<%= path %>assets/images/program05-title.jpg" alt="フルーツバスケット The Final" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program05-image01.jpg" alt="フルーツバスケット The Final" width="590" height="833">
+                                <img src="<%= path %>assets/images/program05-image01.jpg" alt="フルーツバスケット The Final" width="590" height="833">
                             </div>
                             <div class="p-program-visual-links">
                                 <p class="p-program-visual-links__text">視聴はこちら</p>
@@ -317,7 +318,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--youtube" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-youtube.svg" 
+                                                src="<%= path %>assets/images/icon-youtube.svg" 
                                                 alt="YouTube" width="20" height="14">
                                             YouTube
                                         </a>
@@ -325,7 +326,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--twitter" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-twitter.svg" 
+                                                src="<%= path %>assets/images/icon-twitter.svg" 
                                                 alt="Twitter LIVE" width="20" height="18">
                                             Twitter LIVE
                                         </a>
@@ -368,10 +369,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program06-title.jpg" alt="WAVE!!～サーフィンやっぺ!!～" width="591" height="188">
+                                <img src="<%= path %>assets/images/program06-title.jpg" alt="WAVE!!～サーフィンやっぺ!!～" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program06-image01.jpg" alt="WAVE!!～サーフィンやっぺ!!～" width="590" height="834">
+                                <img src="<%= path %>assets/images/program06-image01.jpg" alt="WAVE!!～サーフィンやっぺ!!～" width="590" height="834">
                             </div>
                             <div class="p-program-visual-links">
                                 <p class="p-program-visual-links__text">視聴はこちら</p>
@@ -379,7 +380,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--youtube" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-youtube.svg" 
+                                                src="<%= path %>assets/images/icon-youtube.svg" 
                                                 alt="YouTube" width="20" height="14">
                                             YouTube
                                         </a>
@@ -387,7 +388,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                     <div class="p-program-visual-links__button">
                                         <a href="#TODO" class="c-link-button c-link-button--twitter" target="_blank" rel="noopner">
                                             <img class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-twitter.svg" 
+                                                src="<%= path %>assets/images/icon-twitter.svg" 
                                                 alt="Twitter LIVE" width="20" height="18">
                                             Twitter LIVE
                                         </a>
@@ -431,10 +432,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program07-title.jpg" alt="おそ松さん" width="591" height="188">
+                                <img src="<%= path %>assets/images/program07-title.jpg" alt="おそ松さん" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program07-image01.jpg" alt="おそ松さん" width="590" height="333">
+                                <img src="<%= path %>assets/images/program07-image01.jpg" alt="おそ松さん" width="590" height="333">
                             </div>
                             <div class="p-program-visual-links">
                                 <p class="p-program-visual-links__text">視聴はこちら</p>
@@ -443,7 +444,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                         <a href="#TODO" class="c-link-button c-link-button--youtube" target="_blank" rel="noopner">
                                             <img 
                                                 class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-youtube.svg" 
+                                                src="<%= path %>assets/images/icon-youtube.svg" 
                                                 alt="YouTube" width="20" height="14">
                                             YouTube
                                         </a>
@@ -452,7 +453,7 @@ avex picturesの配信ステージで、盛り上がりましょう！
                                         <a href="#TODO" class="c-link-button c-link-button--twitter" target="_blank" rel="noopner">
                                             <img 
                                                 class="c-link-button__leftIcon" 
-                                                src="/assets/images/icon-twitter.svg" 
+                                                src="<%= path %>assets/images/icon-twitter.svg" 
                                                 alt="Twitter LIVE" width="20" height="18">
                                             Twitter LIVE
                                         </a>
@@ -502,10 +503,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program08-title.jpg" alt="キラッとプリ☆チャン" width="591" height="188">
+                                <img src="<%= path %>assets/images/program08-title.jpg" alt="キラッとプリ☆チャン" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program08-image01.jpg" alt="キラッとプリ☆チャン" width="590" height="828">
+                                <img src="<%= path %>assets/images/program08-image01.jpg" alt="キラッとプリ☆チャン" width="590" height="828">
                             </div>
                         </div>
                         <div class="p-program-detail">
@@ -540,10 +541,10 @@ avex picturesの配信ステージで、盛り上がりましょう！
                     <article class="p-program">
                         <div class="p-program-visual">
                             <h3 class="p-program-visual-title">
-                                <img src="/assets/images/program09-title.jpg" alt="ゾンビランドサガ リベンジ" width="591" height="188">
+                                <img src="<%= path %>assets/images/program09-title.jpg" alt="ゾンビランドサガ リベンジ" width="591" height="188">
                             </h3>
                             <div class="p-program-visual-images">
-                                <img src="/assets/images/program09-image01.jpg" alt="ゾンビランドサガ リベンジ" width="590" height="834">
+                                <img src="<%= path %>assets/images/program09-image01.jpg" alt="ゾンビランドサガ リベンジ" width="590" height="834">
                             </div>
                         </div>
                         <div class="p-program-detail">
@@ -610,51 +611,51 @@ avex picturesの配信ステージで、盛り上がりましょう！
         </div>
     </section>
     <section class="l-goods" id="js-scroll-goods">
-        <h2 class="c-headline"><img src="/assets/images/headline02.png" alt="GOODS" width="300" height="53"></h2>
+        <h2 class="c-headline"><img src="<%= path %>assets/images/headline02.png" alt="GOODS" width="300" height="53"></h2>
         <div class="c-goods">
             <ul class="c-goods-list">
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
                 <li class="c-goods-list__item">
                     <a href="#TODO" class="c-goods-list__link" target="_blank" rel="noopener">
-                        <img src="/assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
+                        <img src="<%= path %>assets/images/goods-dummy.jpg" alt="#TODO" width="382" height="200">
                     </a>
                 </li>
             </ul>
         </div>
     </section>
 </main>
-<%- include('./include/_footer') %>
+<%- include('./include/_footer', { path: path }) %>
