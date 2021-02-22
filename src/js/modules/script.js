@@ -4,15 +4,24 @@
 let isSmartPhone;
 // ブレークポイント（px）
 const breakPoint = '768';
+// ブレークポイント（px）
+let scrollFadeinContents;
 
 {
     init();
-    document.addEventListener('DOMContentLoaded', () => {
-        init();
-    });
+
     window.addEventListener('resize', () => {
         getDeviceWidth();
     });
+    window.addEventListener('scroll', () => {
+        for (let i = 0; i < scrollFadeinContents.length; i++) {
+            addAnimationFunction(scrollFadeinContents[i])
+        }
+    });
+    window.addEventListener('load', () => {
+        deleteLoadingContent();
+        
+    })
 }
 
 
@@ -25,6 +34,7 @@ function init() {
     switchTab();
     getDeviceWidth();
     setAccordion();
+    getFadeinElement();
 }
 
 /**
@@ -136,5 +146,37 @@ function setAccordion() {
                 }
             });
         }
+    }
+}
+
+/**
+ * アコーディオンの開閉機能
+ *
+ */
+function deleteLoadingContent() {
+    const loadingContent = document.getElementById('js-loading');
+    loadingContent.classList.add('is-deleted');
+}
+
+/**
+ * アニメーションを起こす要素を取得
+ */
+function getFadeinElement() {
+    scrollFadeinContents = document.querySelectorAll('.js-scroll-fadein');
+}
+
+/**
+ * 要素がスクロール画面現れたらクラスをつける
+ */
+function addAnimationFunction(element) {
+    // スクロール量
+    let winScroll = window.pageYOffset;
+    // ウィンドウの高さ
+    let winHeight = window.innerHeight;
+    // イベント発火位置(winHeight / 2 で中央辺り)
+    let targetPosition = (winScroll + (winHeight / 1.5));
+
+    if(element.offsetTop < targetPosition) {
+        element.classList.add('is-show');
     }
 }

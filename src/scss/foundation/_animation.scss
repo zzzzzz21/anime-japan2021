@@ -1,0 +1,14 @@
+@mixin fadeIn {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity .5s, transform .3s;
+
+  &.is-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.js-scroll-fadein {
+  @include fadeIn;
+}

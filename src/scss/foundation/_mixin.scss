@@ -8,13 +8,16 @@
   padding-left: 1em;
 }
 // vw計算
-@function get_vw($size, $viewport: 320) {
+@function get_vw($size, $viewport: 1920) {
   $rate: 100 / $viewport;
   @return $rate * $size * 1vw;
 }
 @mixin fz_vw($font_size: 10) {
   font-size: $font_size * 1px;
   font-size: get_vw($font_size);
+}
+@mixin width_vw($witdh) {
+  width: get_vw($witdh);
 }
 
 // 三角形を作る getTriangle(色, 矢印の方向, 幅, 高さ) を入力する。

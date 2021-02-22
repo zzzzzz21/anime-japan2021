@@ -1,9 +1,15 @@
 .l-header {
+  align-items: center;
   background: $base-blue;
   display: flex;
   justify-content: space-between;
-  padding: 34px 60px;
+  padding: 0 60px;
   width: 100%;
+
+  @include pc {
+    height: calc(100 / #{$pc-max-width} * 100vw);
+    max-height: 70px;
+  }
 
   @include sp {
     padding: 17px 20px;
@@ -14,6 +20,9 @@
   font-size: 0;
 
   img {
+    @include pc {
+      @include width_vw(353);
+    }
     @include sp {
       width: 185px;
     }
@@ -36,12 +45,16 @@
     }
   }
 
-  @include sp {
-    &--tw {
+  &--tw {
+    @include width_vw(36);
+    @include sp {
       width: 18px;
     }
+  }
 
-    &--fb {
+  &--fb {
+    @include width_vw(17);
+    @include sp {
       width: 9px;
     }
   }
