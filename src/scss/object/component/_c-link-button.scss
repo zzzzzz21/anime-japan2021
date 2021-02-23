@@ -3,15 +3,17 @@
     border-radius: 35px;
     color: $base-white;
     display: flex;
-    font-size: 24px;
+    font-size: calc(24 / #{$pc-max-width} * 100vw);
     font-weight: $font-weight-medium;
     line-height: 1.875;
     justify-content: center;
-    min-height: 70px;
     outline: none;
-    padding: 10px;
     position: relative;
     width: 100%;
+
+    @include pc {
+        padding: .5em;
+    }
 
     @include sp {
         font-size: 16px;
@@ -21,7 +23,7 @@
     &--nav {
         @include getTriangle($base-white, bottom, 8, 8);
         background: $base-black;
-        letter-spacing: 2px;
+        letter-spacing: .08em;
 
         &::before {
             bottom: 0;
@@ -54,7 +56,7 @@
 
     &--youtube,
     &--twitter {
-        font-size: 20px;
+        font-size: calc(20 / #{$pc-max-width} * 100vw);
 
         @include sp {
             font-size: 16px;
@@ -73,9 +75,8 @@
     &--aj {
         @include getTriangle($base-white, right, 8, 8);
         background: $base-blue;
-        font-size: 20px;
+        font-size: calc(20 / #{$pc-max-width} * 100vw);
         font-weight: $font-weight-regular;
-        max-width: 460px;
 
         &::before {
             bottom: 0;

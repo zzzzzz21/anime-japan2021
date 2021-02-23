@@ -1,5 +1,4 @@
 .c-banner {
-    max-width: calc(#{$pc-content-width} + 30px);
     margin: 0 auto;
 }
 
@@ -21,8 +20,12 @@
     font-size: 0;
 
     @include pc {
-        margin: 30px 15px 0;
-        width: 306px;
+        margin:  calc(30 / #{$pc-max-width} * 100vw) 0 0  1.75%;
+        width: 18.6%;
+
+        &:nth-of-type(5n+1) {
+            margin-left: 0;
+        }
     }
 
     img {
@@ -32,14 +35,14 @@
 
 .c-banner-credit {
     color: $base-white;
-    font-size: 16px;
+    font-size: calc(16 / #{$pc-max-width} * 100vw);
     font-weight: $font-weight-light;
     text-align: center;
-    margin: 88px 0 0;
+    margin: calc(88 / #{$pc-max-width} * 100vw) 0 0;
 
     @include pc {
-        letter-spacing: 2px;
-        line-height: 2.3;
+        letter-spacing: .125em;
+        line-height: 2.4;
     }
 
     @include sp {

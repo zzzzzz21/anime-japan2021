@@ -1,6 +1,5 @@
 .c-goods {
-    max-width: calc(#{$pc-content-width} + 40px);
-    margin: 38px auto 0;
+    margin:  calc(38 / #{$pc-max-width} * 100vw) auto 0;
 
     @include sp {
         margin: 25px auto 0;
@@ -14,8 +13,16 @@
 
 .c-goods-list__item {
     font-size: 0;
-    margin: 40px 20px 0;
-    width: 382px;
+    margin: calc(40 / #{$pc-max-width} * 100vw)  0 0 2%;
+    width: 23.15%;
+
+    @include pc {
+        margin-left: 2.4666666666%;
+
+        &:nth-of-type(4n+1) {
+            margin-left: 0;
+        }
+    }
 
     @include sp {
         margin: 20px 0 0;

@@ -1,5 +1,5 @@
 .l-main {
-    padding: 0 0 170px;
+    padding: 0 calc(60 / #{$pc-max-width} * 100vw) calc(170 / #{$pc-max-width} * 100vw);
 
     @include sp {
         padding: 0 20px 75px;
@@ -7,7 +7,7 @@
 }
 
 .l-kv {
-    padding: 185px 0;
+    padding: calc(185 / #{$pc-max-width} * 100vw) 0;
 
     @include sp {
         padding: 90px 0;
@@ -17,17 +17,11 @@
 
 .l-stage {
     margin: 0 auto;
-    max-width: calc(#{$pc-content-width} + 40px);
     width: 100%;
-
-    @include pc {
-        padding: 0 20px;
-    }
 }
 
 .l-goods {
-    margin: 150px auto 0;
-    max-width: calc(#{$pc-content-width} + 40px);
+    margin: calc(150 / #{$pc-max-width} * 100vw) auto 0;
     width: 100%;
 
     @include sp {
@@ -37,7 +31,7 @@
 
 .l-banner {
     background: $base-blue;
-    padding: 120px 0 92px;
+    padding: calc(120 / #{$pc-max-width} * 100vw) calc(60 / #{$pc-max-width} * 100vw) calc(92 / #{$pc-max-width} * 100vw);
 
     @include sp {
         padding: 75px 20px 40px;

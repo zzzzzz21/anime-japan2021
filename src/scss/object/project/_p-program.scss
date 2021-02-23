@@ -1,6 +1,6 @@
 .p-program {
     background: $program-background;
-    padding: 60px;
+    padding: calc(60 / #{$pc-max-width} * 100vw);
 
     @include pc {
         display: flex;
@@ -11,7 +11,7 @@
     }
 
     & + & {
-        margin-top: 40px;
+        margin-top: calc(40 / #{$pc-max-width} * 100vw);
 
         @include sp {
             margin-top: 20px;
@@ -23,8 +23,8 @@
     display: flex;
     flex-direction: column;
     @include pc {
-        width: 346px;
-        flex-basis: 346px;
+        width: calc(346 / #{$pc-max-width} * 100vw);
+        flex: 0 0 calc(346 / #{$pc-max-width} * 100vw);
     }
 }
 
@@ -38,7 +38,7 @@
 
 .p-program-visual-images {
     font-size: 0;
-    margin-top: 30px;
+    margin-top: calc(30 / #{$pc-max-width} * 100vw);
 
     @include sp {
         margin-top: 20px;
@@ -51,8 +51,8 @@
 
 .p-program-visual-links {
     background: $base-white;
-    margin-top: 30px;
-    padding: 23px 28px 30px;
+    margin-top: calc(30 / #{$pc-max-width} * 100vw);
+    padding: calc(23 / #{$pc-max-width} * 100vw) calc(28 / #{$pc-max-width} * 100vw) calc(30 / #{$pc-max-width} * 100vw);
     text-align: center;
 
     @include sp {
@@ -62,7 +62,7 @@
 }
 
 .p-program-visual-links__text {
-    font-size: 18px;
+    font-size: calc(18 / #{$pc-max-width} * 100vw);
     font-weight: $font-weight-medium;
 
     @include sp {
@@ -71,7 +71,7 @@
 }
 
 .p-program-visual-links__buttons {
-    margin: 15px auto 0;
+    margin: calc(15 / #{$pc-max-width} * 100vw) auto 0;
 
     @include sp {
         margin-top: 8px;
@@ -80,19 +80,22 @@
 
 .p-program-visual-links__button {
     & + & {
-        margin-top: 10px;
+        margin-top: calc(15 / #{$pc-max-width} * 100vw);
+        @include sp {
+            margin-top: 15px;
+        }
     }
 }
 
 .p-program-detail {
     @include pc {
         flex: 1 1 0;
-        padding: 0 0 0 60px;
+        padding: 0 0 0 calc(60 / #{$pc-max-width} * 100vw);
     }
 }
 
 .p-program-detail-head {
-    font-size: 28px;
+    font-size: calc(28 / #{$pc-max-width} * 100vw);
     font-weight: $font-weight-medium;
 
     @include pc {
@@ -110,15 +113,17 @@
 }
 
 .p-program-detail-head__time {
+    align-items: center;
     background: $base-blue;
     color: $base-white;
-    min-height: 70px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    padding: .4em;
     text-align: center;
-    width: 200px;
+    width: calc(200 / #{$pc-max-width} * 100vw);
 
     @include sp {
-        display: block;;
+        display: block;
         margin-top: 20px;
         min-height: 44px;
         padding: 5px;
@@ -131,12 +136,7 @@
 
     @include pc {
         flex: 1;
-        padding-left: 25px;
-    }
-
-    @include tablet {
-        flex: auto;
-        padding-left: 0;
+        padding-left: calc(25 / #{$pc-max-width} * 100vw);
     }
 
     @include sp {
@@ -146,7 +146,7 @@
 }
 
 .p-program-detail-description {
-    margin-top: 32px;
+    margin-top: calc(32 / #{$pc-max-width} * 100vw);
 
     @include sp {
         margin-top: 5px;
@@ -154,7 +154,7 @@
 }
 
 .p-program-detail-dl {
-    margin-top: 24px;
+    margin-top: calc(24 / #{$pc-max-width} * 100vw);
 
     @include sp {
         margin-top: 8px;
@@ -174,7 +174,11 @@
 }
 
 .p-program-detail-button {
-    margin-top: 32px;
+    margin-top: calc(32 / #{$pc-max-width} * 100vw);
+
+    @include pc {
+        max-width: 460px;
+    }
 
     @include sp {
         margin-top: 8px;
