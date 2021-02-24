@@ -48,6 +48,11 @@
         background: $base-white;
         color: $base-blue;
         letter-spacing: 1px;
+		font-size: 18px;
+    	font-weight: $font-weight-medium;
+		@include sp {
+			font-size: 16px;
+		}
 
         &[aria-selected="true"],
         &:hover,

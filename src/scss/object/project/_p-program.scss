@@ -23,8 +23,8 @@
     display: flex;
     flex-direction: column;
     @include pc {
-        width: calc(346 / #{$pc-max-width} * 100%);
-        flex: 0 0 calc(346 / #{$pc-max-width} * 100%);
+        width: calc(#{$pc-content-visual-width} / #{$pc-max-width} * 100%);
+        flex: 0 0 calc(#{$pc-content-visual-width} / #{$pc-max-width} * 100%);
     }
 }
 
