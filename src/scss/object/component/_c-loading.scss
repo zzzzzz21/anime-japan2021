@@ -10,20 +10,24 @@
 
     &.is-deleted {
         animation-name:hideLoading;
-        animation-duration: 3s; 
+        animation-duration: .5s; 
         animation-fill-mode: forwards;
+        animation-delay: 2s;
     }
-}
 
-@keyframes hideLoading {
-    0% {
-        opacity: 1;
-    }
-    99% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-        display: none;
+    &::before {
+        animation: ballScale 1s 0s ease-in-out infinite;
+        background: $base-white;
+        border-radius: 50%;
+        bottom: 0;
+        content: "";
+        height: 60px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 60px;
+
     }
 }

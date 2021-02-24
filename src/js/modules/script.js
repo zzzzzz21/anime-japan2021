@@ -155,7 +155,14 @@ function setAccordion() {
  */
 function deleteLoadingContent() {
     const loadingContent = document.getElementById('js-loading');
+    const kvContent = document.getElementById('js-kv')
     loadingContent.classList.add('is-deleted');
+    kvContent.classList.add('is-show');
+
+    // アニメーション処理終了後にDOMを削除
+    window.setTimeout(() => {
+        loadingContent.parentNode.removeChild(loadingContent);
+    }, 8000)
 }
 
 /**

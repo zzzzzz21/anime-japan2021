@@ -12,3 +12,26 @@
 .js-scroll-fadein {
   @include fadeIn;
 }
+
+@keyframes hideLoading {
+  0% {
+      opacity: 1;
+  }
+  99% {
+      opacity: 0;
+  }
+  100% {
+      visibility: hidden;
+      z-index: -1;
+  }
+}
+
+@keyframes ballScale {
+  0% {
+    transform: scale(0);
+  }
+  99% {
+      opacity: 0;
+      transform: scale(1);
+  }
+}
