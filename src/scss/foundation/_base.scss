@@ -9,9 +9,19 @@ html {
 }
 
 body {
-  background-image:
+  @include pc {
+    background-image:
     url(#{$IMG_PATH}top-keyvisual.png),
     url(#{$IMG_PATH}background.png);
+  }
+
+  @include sp {
+    background-image:
+    url(#{$IMG_PATH}top-keyvisual_sp.png),
+    url(#{$IMG_PATH}background.png);
+    background-size: 100%, auto;
+  }
+
   background-position: center top, left top;
   background-repeat: no-repeat, repeat;
   color: $base-black;

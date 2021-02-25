@@ -128,11 +128,7 @@ function setAccordion() {
             panel.setAttribute('aria-hidden', true);
             panel.setAttribute('aria-labelledby', buttonId);
 
-            window.addEventListener('resize', () => {
-                panelHeight = panel.clientHeight;
-            });
-
-            // アコーディオンの開閉昨日
+            // アコーディオンの開閉機能
             button.addEventListener('click', () => {
                 const buttonAriaExpanded = button.getAttribute('aria-expanded');
                 if(buttonAriaExpanded === 'true') {

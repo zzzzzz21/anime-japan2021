@@ -167,14 +167,6 @@
     color: $base-blue;
 }
 
-.p-program-detail-dl__dd {
-    @include pc {
-        &--indent {
-            @include textIndent;
-        }
-    }
-}
-
 .p-program-detail-button {
     margin-top: calc(32 / #{$pc-max-width} * 100vw);
 
