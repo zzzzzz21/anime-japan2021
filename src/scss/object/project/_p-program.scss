@@ -129,6 +129,16 @@
         padding: 5px;
         width: 134px;
     }
+
+    &--wide {
+        @include pc {
+            width: calc(280 / #{$pc-max-width} * 100vw);
+            max-width: 280px;
+        }
+        @include sp {
+            width: 195px;
+        }
+    }
 }
 
 .p-program-detail-head__name {
@@ -155,7 +165,8 @@
     }
 }
 
-.p-program-detail-dl {
+.p-program-detail-dl,
+.p-program-detail-text {
     margin-top: calc(24 / #{$pc-max-width} * 100vw);
 
     @include sp {

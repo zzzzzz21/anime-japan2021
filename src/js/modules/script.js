@@ -3,7 +3,7 @@
 // PC/SP判定フラグ
 let isSmartPhone;
 // ブレークポイント（px）
-const breakPoint = '768';
+const breakPoint = '769';
 // ブレークポイント（px）
 let scrollFadeinContents;
 
